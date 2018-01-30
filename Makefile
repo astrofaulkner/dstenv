@@ -1,6 +1,6 @@
 ifneq ($(strip $(MAKECMDGOALS)),clean)
 ifeq ($(strip $(VERSION)),)
-VERSION:=$(strip $(filter V%,$(notdir $(shell pwd))))
+VERSION:=V2_2_7_pre6
 ifeq ($(strip $(VERSION)),)
 $(error Missing VERSION)
 endif
