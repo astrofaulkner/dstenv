@@ -5,11 +5,14 @@ ifeq ($(strip $(VERSION)),)
 $(error Missing VERSION)
 endif
 endif
-ifeq ($(strip $(INSTALL_BASE)),)
-$(error Missing INSTALL_BASE)
-endif
+PREFIX:=$(dir $(shell pwd))
 ifeq ($(strip $(PREFIX)),)
 $(error Missing PREFIX)
+endif
+INSTALL_BASE:=/home/TopGun/Documents/PyEnv/ML-Test/dstenv
+ifeq ($(strip $(INSTALL_BASE)),)
+$(info $(INSTALL_BASE))
+$(error Missing INSTALL_BASE)
 endif
 $(info SCRAM version:        $(VERSION))
 $(info SCRAM install prefix: $(INSTALL_BASE))
